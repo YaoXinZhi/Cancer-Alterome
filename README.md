@@ -38,7 +38,7 @@ The implementation of the Cancer-Alterome pipeline relies on several external to
 - [**PubTator Central**](https://www.ncbi.nlm.nih.gov/research/pubtator/): Biomedical named entity recognition, e.g. gene, point mutation, SNP, disease. The identified and normalized gene, point mutation, SNP and disease are keeped in pipeline.
 - [**AGAC-NER**](https://github.com/YaoXinZhi/BERT-CRF-for-BioNLP-OST2019-AGAC-Task1): Named entity recognition of entities defined in AGAC, e.g. gene, genetic alteration, trigger word, molecular process activate, cellular process activity. In pipeline, only keep the identified genetic alteration and trigger word in this step.
 - [**AGAC-RE**](https://github.com/YaoXinZhi/BERT-for-BioNLP-OST2019-AGAC-Task2): Relation extraction for the relation defined in the AGAC, include ThemeOf and CauseOf.
-- [**OGER**](https://pub.cl.uzh.ch/purl/OGER): A hybrid NER-CR system for text mining in the biomedical domain, it's used to identify and normalize the Gene Ontlogy (GO) concepts in the pipeline.
+- [**OGER++**](https://pub.cl.uzh.ch/purl/OGER): A hybrid NER-CR system for text mining in the biomedical domain, it's used to identify and normalize the Gene Ontlogy (GO) concepts in the pipeline.
 - [**PhenoTagger**](https://github.com/ncbi-nlp/PhenoTagger): A hybrid method that combines dictionary and deep learning-based methods to recognize Human Phenotype Ontology (HPO) concepts in unstructured biomedical text, it's used to identify and normalize the HPO concepts in the pipeline.
 
 ---
@@ -46,7 +46,7 @@ The implementation of the Cancer-Alterome pipeline relies on several external to
 The `Backbone Scripts` for each step in the Cancer-Alterome pipeline are provided in the corresponding folder, with usage guidelines as follows.
 
 ### 1. Literature Prepare
-The Literature Preparation folder contains 5 scripts.
+The `LiteraturePrepare` folder contains 5 scripts.
 
 - `1. get_pmc_pmid.py` and `1.1 esearch_get_pmc_pmid.py` is used to search PubMed and PubMed Central databases based on keywords and to download PMID and PMCID.
 
@@ -56,13 +56,33 @@ The Literature Preparation folder contains 5 scripts.
  
 - `4. biocjson_to_jounral_info.py` is used to extract the journal information corresponding to the article from the BiocJson format file, including the journal name, the year of publication, and so on.
 
-### Named Entity Recognition and Normalization.
+### 2. Named Entity Recognition and Normalization.
+The `NamedEntityRecognization` folder contains 6 scripts with the following usage guidelines.  
 
-### Relation Extraction
+It should be noted that since [**AGAC-NER**](https://github.com/YaoXinZhi/BERT-CRF-for-BioNLP-OST2019-AGAC-Task1) and [**AGAC-RE**](https://github.com/YaoXinZhi/BERT-for-BioNLP-OST2019-AGAC-Task2) already have independent repositories, only the format conversion scripts for they input and output are provided here.
 
-### Regulatory Events Identification
+In addition, before using [**OGER++**](https://pub.cl.uzh.ch/purl/OGER) and [**PhenoTagger**](https://github.com/ncbi-nlp/PhenoTagger), you may need to visit their project websites and configure the tool environment.
 
-### Data Visualization
+
+- `1. pubtator_to_agac_ner_input.py` provides the conversion of PubTator format documentation to AGAC-NER model input format.
+  
+- `2. agac_ner_output_procss.py` provides formatting of AGAC-NER model output documents.
+  
+- `3. oger_tagger.py` provides batch GO concept annotation for OGER++. the vocabularies required for OGER++ are provided in go.term.tsv and hpo.term.tsv.
+  
+- `4. OGER_result_process.py` provides the result processing for OGER++.
+  
+- `5. PhenoTagger_training.py` provides the training function of PhenoTagger.
+   
+- `6. PhenoTagger_tagging.py` provides batch tagging of HPO concepts by PhenoTagger.  
+
+
+
+### 3. Relation Extraction
+
+### 4. Regulatory Events Identification
+
+### 5. Data Visualization
 
 
 
