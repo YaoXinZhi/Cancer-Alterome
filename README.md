@@ -33,11 +33,10 @@ The pipeline implementation involves several external tools, the description and
 
 ---
 ## Pipeline Usage
-The `Backbone Scripts` for each step in the Cancer-Alterome pipeline are provided in the corresponding folder, with usage guidelines as follows.
+All `16 backbone scripts` for each step in pipeline are released in this repository, and the script names are `numbered` indicating the `running order`. The usages of the script are listed below.
 
-All scripts are sorted by numbers indicating the pipeline running order. Since `argparser` is used in all scripts, user can simply use `python3 script.py -h` to check the input required by the script.
 
-### 1. Literature Prepare
+### 1. Literature Preparation
 The `LiteraturePrepare` folder contains 5 scripts.
 
 - `1. get_pmc_pmid.py` and `1.1 esearch_get_pmc_pmid.py` is used to search PubMed and PubMed Central databases based on keywords and to download PMID and PMCID.
@@ -46,7 +45,7 @@ The `LiteraturePrepare` folder contains 5 scripts.
 
 - `3. biocjson_to_pubtator.py` provides PubTator format conversion of BiocJson format files. This conversion step is necessary due to the pipeline design where the PubTator format is used for subsequent data processing.
  
-- `4. biocjson_to_jounral_info.py` is used to extract the journal information corresponding to the article from the BiocJson format file, including the journal name, the year of publication, and so on.
+- `4. biocjson_to_jounral_info.py` is used to extract the journal information of the article from the BiocJson format file, e.g. journal name, the year of publication.
 
 ### 2. Named Entity Recognition and Normalization.
 The `NamedEntityRecognization` folder contains 6 scripts with the following usage guidelines.  
