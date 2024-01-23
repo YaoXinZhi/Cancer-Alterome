@@ -59,7 +59,7 @@ The `LiteraturePrepare` folder contains 5 scripts.
 ### 2. Named Entity Recognition and Normalization.
 The `NamedEntityRecognization` folder contains 6 scripts with the following usage guidelines.  
 
-It should be noted that since [**AGAC-NER**](https://github.com/YaoXinZhi/BERT-CRF-for-BioNLP-OST2019-AGAC-Task1) and [**AGAC-RE**](https://github.com/YaoXinZhi/BERT-for-BioNLP-OST2019-AGAC-Task2) already have independent repositories, only the format conversion scripts for they input and output are provided here.
+It should be noted that since [**AGAC-NER**](https://github.com/YaoXinZhi/BERT-CRF-for-BioNLP-OST2019-AGAC-Task1) already have independent repositories, only the format conversion scripts for they input and output are provided here.
 
 In addition, before using [**OGER++**](https://pub.cl.uzh.ch/purl/OGER) and [**PhenoTagger**](https://github.com/ncbi-nlp/PhenoTagger), you may need to visit their project websites and configure the tool environment.
 
@@ -77,8 +77,14 @@ In addition, before using [**OGER++**](https://pub.cl.uzh.ch/purl/OGER) and [**P
 - `6. PhenoTagger_tagging.py` provides batch tagging of HPO concepts by PhenoTagger.  
 
 
-
 ### 3. Relation Extraction
+In the `RelationExtraction` folder, 2 scripts are provided with the following usages.
+Similarly, you can find the usages for [**AGAC-RE**](https://github.com/YaoXinZhi/BERT-for-BioNLP-OST2019-AGAC-Task2) in it's repositories.
+
+- `1. ner_tagging_to_agac_re_input.py` provides the format conversion of the AGAC-NER output to the AGAC-RE inputs. 
+  
+- `2. agac_re_infer_process.py` is used to process the prediction results of AGAC-RE.
+
 
 ### 4. Regulatory Events Identification
 
