@@ -54,18 +54,17 @@ It should be noted that since [**AGAC-NER**](https://github.com/YaoXinZhi/BERT-C
 
 In addition, before using [**OGER++**](https://pub.cl.uzh.ch/purl/OGER) and [**PhenoTagger**](https://github.com/ncbi-nlp/PhenoTagger), you may need to visit their project websites and configure the tool environment.
 
-
 - `1. pubtator_to_agac_ner_input.py` provides the conversion of PubTator format documentation to AGAC-NER model input format.
   
-- `2. agac_ner_output_procss.py` provides formatting of AGAC-NER model output documents.
+- `2. agac_ner_output_procss.py` is used to process the output file of the AGAC-NER task.
   
-- `3. oger_tagger.py` provides batch GO concept annotation for OGER++. the vocabularies required for OGER++ are provided in go.term.tsv and hpo.term.tsv.
+- `3. oger_tagger.py` provides batch GO concept annotation by using OGER++. The vocabularies files required for OGER++ are also provided in go.term.tsv and hpo.term.tsv.
   
-- `4. OGER_result_process.py` provides the result processing for OGER++.
+- `4. OGER_result_process.py` provides the result processing for OGER++ results.
   
-- `5. PhenoTagger_training.py` provides the training function of PhenoTagger.
+- `5. PhenoTagger_training.py` provides the model training function of PhenoTagger.
    
-- `6. PhenoTagger_tagging.py` provides batch tagging of HPO concepts by PhenoTagger.  
+- `6. PhenoTagger_tagging.py` is used to batch tagging the HPO concepts by using PhenoTagger.  
 
 
 ### 3. Relation Extraction
@@ -77,7 +76,7 @@ Similarly, you can find the usages for [**AGAC-RE**](https://github.com/YaoXinZh
 - `2. agac_re_infer_process.py` is used to process the prediction results of AGAC-RE.
 
 
-### 4. Regulatory Events Identification
+### 4. Regulatory Events Extraction
 The `GARE-Extraction` folder contains one script.
 
 - `1. rule_based_gare_extraction.py` is used to extract the complete GARE from the above steps based on the design rules of GARE.
