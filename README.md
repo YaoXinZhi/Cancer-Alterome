@@ -26,14 +26,6 @@ source $env_name/bin/activate
 deactivate
 ```
 
-### Requirements
-
-```
-pip3 install -r requirements.txt
-```
-If you cannot download torch automatically through requirements.txt, you can delete the torch version information and get the command line of torch installation from the [torch official website](https://pytorch.org/). Note that the installed torch version needs to be the same as that in requirenemts.txt.
-
-
 ### Python Libraries
 The Pipeline implementation relies on the underlying python library, e.g. numpy, scipy, nltk.
 You can install it via pip install <library> or conda install <library>.
@@ -51,8 +43,27 @@ The implementation of the Cancer-Alterome pipeline relies on several external to
 
 ---
 ## Pipeline Usage
+The `Backbone Scripts` for each step in the Cancer-Alterome pipeline are provided in the corresponding folder, with usage guidelines as follows.
 
-### Literature prepare
+### 1. Literature Prepare
+The Literature Preparation folder contains 5 scripts.
+
+- `1. get_pmc_pmid.py` and `1.1 esearch_get_pmc_pmid.py` is used to search PubMed and PubMed Central databases based on keywords and to download PMID and PMCID.
+
+- `2. pmc_pmid_to_biocjson.py` is used to automatically download the abstracts as well as full text of the corresponding literature from PubMed Central's API based on the PMIDs and PMCIDs obtained in the previous step, and includes the PubTator annotation.
+
+- `3. biocjson_to_pubtator.py` provides PubTator format conversion of BiocJson format files. This conversion step is necessary due to the pipeline design where the PubTator format is used for subsequent data processing.
+ 
+- `4. biocjson_to_jounral_info.py` is used to extract the journal information corresponding to the article from the BiocJson format file, including the journal name, the year of publication, and so on.
+
+### Named Entity Recognition and Normalization.
+
+### Relation Extraction
+
+### Regulatory Events Identification
+
+### Data Visualization
+
 
 
 ---
