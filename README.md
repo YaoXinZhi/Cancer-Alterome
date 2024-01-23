@@ -17,7 +17,7 @@ You can install these library via `pip install <library>` or `conda install <lib
 ___
 
 ## External Tools
-The implementation of the Cancer-Alterome pipeline relies on several external tools, several of which already have mature github repositories or project home pages. We provide a quick jump below to help you understand how to get started with these tools.
+The implementation of the Cancer-Alterome pipeline included several external tools, and they arealdy have complete repositories or project home pages. We provide a quick jump below to help you check how to get started with these tools.
 
 - [**PubTator Central**](https://www.ncbi.nlm.nih.gov/research/pubtator/): Biomedical named entity recognition, e.g. gene, point mutation, SNP, disease. The identified and normalized gene, point mutation, SNP and disease are keeped in pipeline.
 - [**AGAC-NER**](https://github.com/YaoXinZhi/BERT-CRF-for-BioNLP-OST2019-AGAC-Task1): Named entity recognition of entities defined in AGAC, e.g. gene, genetic alteration, trigger word, molecular process activate, cellular process activity. In pipeline, only keep the identified genetic alteration and trigger word in this step.
