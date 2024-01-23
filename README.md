@@ -49,6 +49,10 @@ The implementation of the Cancer-Alterome pipeline relies on several external to
 - [**OGER**](https://pub.cl.uzh.ch/purl/OGER): A hybrid NER-CR system for text mining in the biomedical domain, it's used to identify and normalize the Gene Ontlogy (GO) concepts in the pipeline.
 - [**PhenoTagger**](https://github.com/ncbi-nlp/PhenoTagger): A hybrid method that combines dictionary and deep learning-based methods to recognize Human Phenotype Ontology (HPO) concepts in unstructured biomedical text, it's used to identify and normalize the HPO concepts in the pipeline.
 
+---
+## Pipeline Usage
+
+### Literature prepare
 
 
 ---
