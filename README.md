@@ -17,10 +17,13 @@ You can install these library via `pip install <library>` or `conda install <lib
 ___
 
 ## External Tools
-The implementation of the Cancer-Alterome pipeline included several external tools, and they arealdy have complete repositories or project home pages. We provide a quick jump below to help you check how to get started with these tools.
+The pipeline implementation involves several external tools, the description and links of these tools are provided below. Users may need to configure and test these tools before running the full Cancer-Alterome pipeline.
 
-- [**PubTator Central**](https://www.ncbi.nlm.nih.gov/research/pubtator/): Biomedical named entity recognition, e.g. gene, point mutation, SNP, disease. The identified and normalized gene, point mutation, SNP and disease are keeped in pipeline.
-- [**AGAC-NER**](https://github.com/YaoXinZhi/BERT-CRF-for-BioNLP-OST2019-AGAC-Task1): Named entity recognition of entities defined in AGAC, e.g. gene, genetic alteration, trigger word, molecular process activate, cellular process activity. In pipeline, only keep the identified genetic alteration and trigger word in this step.
+
+- [**PubTator Central**](https://www.ncbi.nlm.nih.gov/research/pubtator/): Used to identify and standardize genes, point mutations, single nucleotide mutations, and disease mentions in pipeline.
+  
+- [**AGAC-NER**](https://github.com/YaoXinZhi/BERT-CRF-for-BioNLP-OST2019-AGAC-Task1): This model are used to identify the genetic alteration and trigger word defined in AGAC corpus.
+  
 - [**AGAC-RE**](https://github.com/YaoXinZhi/BERT-for-BioNLP-OST2019-AGAC-Task2): Relation extraction for the relation defined in the AGAC, include ThemeOf and CauseOf.
 - [**OGER++**](https://pub.cl.uzh.ch/purl/OGER): A hybrid NER-CR system for text mining in the biomedical domain, it's used to identify and normalize the Gene Ontlogy (GO) concepts in the pipeline.
 - [**PhenoTagger**](https://github.com/ncbi-nlp/PhenoTagger): A hybrid method that combines dictionary and deep learning-based methods to recognize Human Phenotype Ontology (HPO) concepts in unstructured biomedical text, it's used to identify and normalize the HPO concepts in the pipeline.
