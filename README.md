@@ -93,8 +93,13 @@ The `GARE-Extraction` folder contains one script.
 
 
 ### 5. Data Visualization
+The `DatabasePrepare` folder contains 3 scripts for data format conversion and visualization.
 
+- `1. gare_to_database.py` is used to convert the GARE results generated in the previous step into a more readable tab-delimited database format.
 
+- `2. multi-gene-heatmap.ipynb` is used to plot the heatmap web page visualization shown in the literature.
+
+- `3. Signle_gene_SanKey.ipynb` is used to plot the SanKey web page visualization presented in the literature.
 
 ---
 
