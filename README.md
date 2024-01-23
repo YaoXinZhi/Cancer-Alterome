@@ -20,13 +20,16 @@ ___
 The pipeline implementation involves several external tools, the description and links of these tools are provided below. Users may need to configure and test these tools before running the full Cancer-Alterome pipeline.
 
 
-- [**PubTator Central**](https://www.ncbi.nlm.nih.gov/research/pubtator/): Used to identify and standardize genes, point mutations, single nucleotide mutations, and disease mentions in pipeline.
+- [**PubTator Central**](https://www.ncbi.nlm.nih.gov/research/pubtator/): This tool are used to identify and standardize genes, point mutations, single nucleotide mutations, and disease mentions in pipeline.
   
 - [**AGAC-NER**](https://github.com/YaoXinZhi/BERT-CRF-for-BioNLP-OST2019-AGAC-Task1): This model are used to identify the genetic alteration and trigger word defined in AGAC corpus.
   
-- [**AGAC-RE**](https://github.com/YaoXinZhi/BERT-for-BioNLP-OST2019-AGAC-Task2): Relation extraction for the relation defined in the AGAC, include ThemeOf and CauseOf.
-- [**OGER++**](https://pub.cl.uzh.ch/purl/OGER): A hybrid NER-CR system for text mining in the biomedical domain, it's used to identify and normalize the Gene Ontlogy (GO) concepts in the pipeline.
-- [**PhenoTagger**](https://github.com/ncbi-nlp/PhenoTagger): A hybrid method that combines dictionary and deep learning-based methods to recognize Human Phenotype Ontology (HPO) concepts in unstructured biomedical text, it's used to identify and normalize the HPO concepts in the pipeline.
+- [**AGAC-RE**](https://github.com/YaoXinZhi/BERT-for-BioNLP-OST2019-AGAC-Task2): This model are used to identify the genetic alteration and trigger word defined in AGAC corpus.
+
+  
+- [**OGER++**](https://pub.cl.uzh.ch/purl/OGER): This model are used to extract the relations defined in AGAC corpus, include \textit{Theme} and \textit{Cause}.
+
+- [**PhenoTagger**](https://github.com/ncbi-nlp/PhenoTagger): This tool are used to identify the mentions of GO concepts in the text, and normalize mentions to GO IDs.
 
 ---
 ## Pipeline Usage
