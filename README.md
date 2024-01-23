@@ -10,25 +10,9 @@ The repository includes the complete pipeline implementation for the Cancer-Alte
 ### Python Version
 This project is developed using Python 3.6+.
 
-### Virtual Environment
-You can build a virtual environment for project operation.  
-```
-# Building a virtual environment
-pip3 install virtualenv
-pip3 install virtualenvwrapper
-
-virtualenv -p /usr/local/bin/python3.6 $env_name --clear  
-
-# active venv.
-source $env_name/bin/activate  
-
-# deactive venv.
-deactivate
-```
-
 ### Python Libraries
-The Pipeline implementation relies on the underlying python library, e.g. numpy, scipy, nltk.
-You can install it via pip install <library> or conda install <library>.
+The Pipeline implementation relies on the underlying python library, e.g. numpy, scipy, nltk, Pyecharts.
+You can install these library via `pip install <library>` or `conda install <library>`.
 
 ___
 
