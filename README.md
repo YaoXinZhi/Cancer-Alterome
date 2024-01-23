@@ -1,7 +1,7 @@
 # Cancer-Alterome
 In the quest to unravel the intricate mechanisms underlying tumors, understanding cancer is crucial for developing effective treatments. Our project, Cancer-Alterome, addresses this challenge by presenting a literature-mined dataset focusing on the regulatory events within an organism's biological processes or clinical phenotypes induced by genetic alterations.  
 
-The repository includes the original pipeline implementation for the Cancer-Alterome construction, as well as the code of data statistics and visualization.
+The repository includes the original pipeline implementation for the Cancer-Alterome construction, baseically used to extract the Genetic Alteration caused Regulatory Events (GARE), as well as the script for data statistics and visualization.
 
 - - -
 
@@ -87,6 +87,10 @@ Similarly, you can find the usages for [**AGAC-RE**](https://github.com/YaoXinZh
 
 
 ### 4. Regulatory Events Identification
+The `GARE-Extraction` folder contains one script.
+
+- `1. rule_based_gare_extraction.py` is used to extract the complete GARE from the above steps based on the design rules of GARE.
+
 
 ### 5. Data Visualization
 
