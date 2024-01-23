@@ -45,6 +45,8 @@ The implementation of the Cancer-Alterome pipeline relies on several external to
 ## Pipeline Usage
 The `Backbone Scripts` for each step in the Cancer-Alterome pipeline are provided in the corresponding folder, with usage guidelines as follows.
 
+All scripts are sorted by numbers indicating the pipeline running order. Since `argparser` is used in all scripts, user can simply use `python3 script.py -h` to check the input required by the script.
+
 ### 1. Literature Prepare
 The `LiteraturePrepare` folder contains 5 scripts.
 
