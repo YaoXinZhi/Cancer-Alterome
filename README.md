@@ -91,6 +91,20 @@ The `DatabasePrepare` folder contains 3 scripts for data format conversion and v
 
 - `3. Signle_gene_SanKey.ipynb` is used to plot the SanKey web page visualization presented in the literature.
 
+
+### 5. OpenAI Evaluation
+There are 3 script and 5 prompts are used for OpenAI LLM evaluation.
+
+
+- `1. gpt_query_xzyao.py` used to batch request the OpenAI API using prompt and save the response results.
+
+- `2. chatgpt_ner_eval.py` used to evaluate the NER annotation results returned by the API.
+
+- `3. chatgpt_re_eval.py` used to evaluate the RE annotation results returned by the API.
+
+- `4. event-generation-evaluation.py` used to evaluate GARE generation results returned by the API.
+
+
 ---
 
 ## Reference
