@@ -1,0 +1,10 @@
+I will give you some sentences, please recognize the point mutations and single nucleotide mutations in the sentences, without gene name.
+
+example:
+sentence-0: PMC2777185 One such mutation, MEK1(P124L), was identified in a resistant metastatic focus that emerged in a melanoma patient treated with AZD6244.
+sentence-0: P124L
+
+Answer with the same format with example.
+
+Please extract all point mutations and SNP mentioned in the following sentences:
+<<replace sentences here>>

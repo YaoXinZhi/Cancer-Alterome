@@ -1,0 +1,15 @@
+We define the "genetic alterations description", including point mutations, single nucleotide polymorphisms, and other gene alterations such as "Mutation", "Knockout", "Knockin", and so on.
+I will give you some sentences, please recognize the "genetic alteration description" in the sentences.
+
+example:
+Sentence:
+sentence-0: The most frequent LoF mutation in human cancers is Adenomatous polyposis coli (APC), causing aberrant activation of the Wnt pathway.
+sentence-1: RESULTS: Novel mutations in the UBIAD1 gene (Y174C, K181R, and N233H) were identified.
+Answer:
+sentence-0: mutation
+sentence-1: Y174C, K181R, N233H
+
+Only answer with the format “Sentence-0: Mention1, Mention2”.
+
+Please extract all "genetic alterations description" mentioned in the following sentences:
+<<replace sentences here>>

@@ -1,0 +1,47 @@
+We define "genetic alteration caused regulatory event" as defined below.
+A genetic alteration occurs in a specific gene, then the alteration further caused the regulation of a downstream biological process.
+There are three different regulatory types, neutral regulation (Reg), positive regulation (PosReg) and negative regulation (NegReg).
+Finally, event are formed as "gene -- genetic alteration -- trigger word (regulatory type) -- biological process"
+
+rules for extraction:
+1. The gene in the event should be isolated gene name or symbol, not containing other words, like "gene", "mutated".
+2. One event should contain only single gene and single biological process.
+3. The genetic alteration in event should be the change of the gene, like SNPs, or general alteration, e.g. "mutant", "knockdown"".
+4. The trigger words in the event should be divided into three regulatory types, e.g. "cause" is neutral regulation, "enhanced" is positive regulation, and "reduced" is negative regulation.
+5. The biological process in the event should be isolated concept, not containing other adjective, like "enhanced" and "different", and it's not always the predicate in the sentence.
+6. Trigger words keep only the most important words.
+7. The event have to include 4 elements, gene, genetic alteration, trigger word and biological process.
+8. All elements in the event must be in the sentence.
+10. If the event describes negation, mark "Negation" in the regulatory type, e.g. "no association".
+
+Please response me as the following format:
+sent-1:
+event-1: gene1 -- genetic alteration1 -- trigger word1 (regulatory type1) -- biological process1
+event-2: gene2 -- genetic alteration2 -- trigger word2 (regulatory type2) -- biological process2
+...
+
+Please extract the events from the following sentences.
+<<target_sent_replace_here>>
+
+Some example:
+sent-1: 32449922 Among the 11 ZF-HD genes in rice, the overexpression of OsZHD1 and OsZHD2 induces leaf curling by controlling the number and arrangement of bulliform cells.
+event-1: OsZHD1 -- overexpression -- induces (Reg) -- leaf curling
+event-2: OsZHD2 -- overexpression -- induces (Reg) -- leaf curling
+event-3: OsZHD1 -- overexpression -- controlling (Reg) -- number of bulliform cells
+event-4: OsZHD2 -- overexpression -- controlling (Reg) -- number of bulliform cells
+event-5: OsZHD1 -- overexpression -- induces (Reg) -- leaf curling
+event-6: OsZHD2 -- overexpression -- controlling (Reg) -- number of bulliform cells
+event-7: OsZHD1 -- overexpression -- controlling (Reg) -- arrangement of bulliform cells
+event-8: OsZHD2 -- overexpression -- controlling (Reg) -- arrangement of bulliform cells
+
+sent-2: 21209026 Introduction of the semi-dominant Bc6 mutant gene into wild-type rice significantly reduced the percentage of cellulose, causing brittle phenotypes.
+chain-1: Bc6 -- semi-dominant mutant -- significantly reduced (NegReg) -- percentage of cellulose
+chain-1: Bc6 -- semi-dominant mutant -- causing (Reg) -- brittle phenotypes
+
+sent-3: 21963665 Here, we characterized the rice (Oryza sativa) lax panicle2 (lax2) mutant, which has altered AM formation.
+chain-1: lax panicle2 -- mutant -- altered (Reg) -- AM formation
+chain-2: lax2 -- mutant -- altered (Reg) -- AM formation
+
+sent-4: 21807436 Knockdown of OsPAO and OsRCCR1 cause different plant death phenotypes in rice.
+chain-1: OsPAO -- Knockdown -- cause (Reg) -- plant death phenotypes
+chain-2: OsRCCR1 -- knockdown -- cause (Reg) -- plant death phenotypes

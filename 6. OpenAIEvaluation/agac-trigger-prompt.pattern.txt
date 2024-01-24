@@ -1,0 +1,15 @@
+We define the "trigger word" in regulatory events description, like "associated with", "causing" and "activation".
+I will give you some sentences, please recognize the "trigger word" in the sentences.
+
+example:
+Sentence:
+sentence-0: In nearly all colon cancer tumors, the APC protein is truncated, but still retains partial binding abilities.
+sentence-1: A new variant database for mismatch repair genes associated with Lynch syndrome.
+Answer:
+sentence-0: retains partial
+sentence-1: associated with
+
+Only answer with the format “Sentence-0: Mention1, Mention2”, One-sentence responses take up one line.
+
+Please extract all "trigger word" mentioned in the following sentences:
+<<replace sentences here>>

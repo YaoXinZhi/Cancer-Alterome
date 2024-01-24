@@ -1,0 +1,15 @@
+In Gene Ontology, BF (Biological Process) encompasses activities or processes related to specific biological systems, while MF (Molecular Function) focuses on specific functions or activities at the molecular level.
+I will give you some sentences, please recognize the "GO concepts" from the sentences.
+
+example:
+Sentence:
+sentence-0: Rescue of Progeria in Trichothiodystrophy by Homozygous Lethal Xpd Alleles.
+sentence-1: XP is marked by sun-induced pigmentation anomalies and a greater than 1,000-fold elevation in skin cancer risk.
+Answer:
+sentence-0: Lethal
+sentence-1: pigmentation
+
+Only answer with the format “Sentence-0: Mention1, Mention2”, One-sentence responses take up one line.
+
+Please extract "GO concept" mentioned in the following sentences:
+<<replace sentences here>>

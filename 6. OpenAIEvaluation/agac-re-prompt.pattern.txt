@@ -1,0 +1,21 @@
+We define 4 types of entities and 3 types of relations in the sentence.
+<Gene> for Gene, <Alt> for Genetic Alteration, <Trigger> for Trigger word, and <BioPro> for Biological Process.
+"ThemeOf" denotes the theme relation between <Gene> and <Alt>, or <Trigger> and <BioPro>.
+"CauseOf" denotes the causal relation between <Alt> and <Trigger>.
+"NoRelation" denotes no relation between the two entities.
+I will give you the sentence containing the two tags of entity, and please categorize the relationship between the two entities.
+
+example:
+Sentence:
+sentence-0: <Var>Mutations</Var> in the mouse <Gene>Lmna</Gene> gene causing progeria, muscular dystrophy and cardiomyopathy.
+sentence-1: <Var>Mutations</Var> in the mouse Lmna gene <Reg>causing</Reg> progeria, muscular dystrophy and cardiomyopathy.
+sentence-2: Mutations in the mouse Lmna gene <Reg>causing</Reg> progeria, <Disease>muscular dystrophy</Disease> and cardiomyopathy.
+Answer:
+sentence-0: ThemeOf
+sentence-1: CauseOf
+sentence-2: ThemeOf
+
+Only answer with the format “Sentence-0: relation”, One-sentence responses take up one line.
+
+Please categorize the relationship between the two entities in the following sentences:
+<<replace sentences here>>
