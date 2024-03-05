@@ -3,6 +3,22 @@ In the quest to unravel the intricate mechanisms underlying tumors, understandin
 
 The repository includes the complete pipeline implementation for the Cancer-Alterome construction, basically used to extract the `Genetic Alteration caused Regulatory Events` (`GARE`), as well as the script for generating the data visualization in MS.
 
+**If the work is useful to you, please refer to the citation.**
+
+```bibtex
+@article{yao2024cancer,
+  title={Cancer-Alterome: a literature-mined resource for regulatory events caused by genetic alterations in cancer},
+  author={Yao, Xinzhi and He, Zhihan and Liu, Yawen and Wang, Yuxing and Ouyang, Sizhuo and Xia, Jingbo},
+  journal={Scientific Data},
+  volume={11},
+  number={1},
+  pages={265},
+  year={2024},
+  publisher={Nature Publishing Group UK London}
+}
+```
+
+
 - - -
 
 ## Environment Configuration
